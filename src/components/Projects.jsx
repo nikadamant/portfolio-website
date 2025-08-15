@@ -10,24 +10,38 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Portfolio',
-      image: '/images/portfolio.png',
-      alt: 'Portfolio project',
-      github: 'https://github.com/nikadamant/html-portfolio-css-in-html-'
+      title: 'Book-notes app',
+      image: '/images/book-notes.png',
+      alt: 'Book-notes app',
+      github: 'https://github.com/nikadamant/book-notes-app'
     },
     {
       id: 3,
-      title: 'Bose landing page',
-      image: '/images/bose-landing.png',
-      alt: 'Bose landing page project',
-      github: 'https://github.com/nikadamant/Landing'
+      title: 'Simon game',
+      image: '/images/simon-game.png',
+      alt: 'Simon game',
+      github: 'https://github.com/nikadamant/simon-game'
     },
     {
       id: 4,
-      title: 'Flexbox pricing table',
-      image: '/images/flexbox-pricing-table.png',
-      alt: 'Flexbox pricing table project',
-      github: 'https://github.com/nikadamant/flexbox-pricing-table-project'
+      title: 'My-blog',
+      image: '/images/my-blog.png',
+      alt: 'my-blog',
+      github: 'https://github.com/nikadamant/my-blog'
+    },
+    {
+      id: 5,
+      title: 'poetry-guide',
+      image: '/images/poetry-guide.png',
+      alt: 'poetry-guide',
+      github: 'https://github.com/nikadamant/poetry-guide'
+    },
+    {
+      id: 6,
+      title: 'portfolio-website',
+      image: '/images/portfolio-website.png',
+      alt: 'portfolio-website',
+      github: 'https://github.com/nikadamant/portfolio-website'
     }
   ];
 
