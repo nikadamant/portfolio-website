@@ -1,0 +1,7 @@
+/* App-specific styles */
+.App {
+  text-align: center;
+}
+
+/* Import the main styles */
+@import './styles.css'; 
