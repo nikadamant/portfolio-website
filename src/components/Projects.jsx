@@ -4,28 +4,28 @@ const Projects = () => {
     {
       id: 1,
       title: 'Fit Coach',
-      image: '/images/fit-coach.png',
+      image: '../public/images/fit-coach.png',
       alt: 'Fit coach project',
       github: 'https://github.com/nikadamant/fit-coach'
     },
     {
       id: 2,
       title: 'Portfolio',
-      image: '/images/portfolio.png',
+      image: '../public/images/portfolio.png',
       alt: 'Portfolio project',
       github: 'https://github.com/nikadamant/html-portfolio-css-in-html-'
     },
     {
       id: 3,
       title: 'Bose landing page',
-      image: '/images/bose-landing.png',
+      image: '../public/images/bose-landing.png',
       alt: 'Bose landing page project',
       github: 'https://github.com/nikadamant/Landing'
     },
     {
       id: 4,
       title: 'Flexbox pricing table',
-      image: '/images/flexbox-pricing-table.png',
+      image: '../public/images/flexbox-pricing-table.png',
       alt: 'Flexbox pricing table project',
       github: 'https://github.com/nikadamant/flexbox-pricing-table-project'
     }
