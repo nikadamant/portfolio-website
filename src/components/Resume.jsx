@@ -6,7 +6,7 @@ const Resume = () => {
         <h2>Skills</h2>
         <div className="resume-content">
           <div className="skills">
-            <h3>Programming Languages</h3>
+            <h3 className="skills-title">Programming Languages</h3>
             <ul>
               <li>HTML, CSS, JavaScript</li>
               <li>ES6</li>
@@ -18,7 +18,7 @@ const Resume = () => {
           </div>
 
           <div className="skills">
-            <h3>Frameworks</h3>
+            <h3 className="skills-title">Frameworks/Libraries</h3>
             <ul>
               <li>React</li>
               <li>Node.js</li>
@@ -30,7 +30,7 @@ const Resume = () => {
           </div>
 
           <div className="skills">
-            <h3>Databases</h3>
+            <h3 className="skills-title">Databases</h3>
             <ul>
               <li>SQL Server</li>
               <li>PostgreSQL(basic)</li>
@@ -40,7 +40,7 @@ const Resume = () => {
           </div>
 
           <div className="skills">
-            <h3>Tools</h3>
+            <h3 className="skills-title">Tools</h3>
             <ul>
               <li>Visual Studio</li>
               <li>Visual Studio Code</li>
