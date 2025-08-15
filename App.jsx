@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
@@ -10,12 +10,34 @@ import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  });
+
+  useEffect(() => {
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <div className="App">
       <Hero />
+      <Navbar />
       <AboutMe />
       <Resume />
+      <Projects />
+      <ContactMe />
       <Footer />
+      <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
     </div>
   );
 }
