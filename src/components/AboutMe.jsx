@@ -10,7 +10,7 @@ const AboutMe = () => {
         </p>
         <div className="about-images">
           <img
-            src="../public/images/profile.png"
+            src="/images/profile.png"
             alt="Profile Image 1"
             className="about-image"
           />
