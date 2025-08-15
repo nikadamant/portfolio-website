@@ -4,7 +4,7 @@
   --secondary-color: #0056b3;
   --accent-color: #ffcc00;
   --text-color: #454545;
-  --bg-color: #aeaeae;
+  --bg-color: #eeeeee76;
   --section-bg: #e0e0e0;
   --section-alt-bg: #f1f1f1;
   --navbar-bg: #4241416f;
@@ -130,7 +130,7 @@ ul {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -421,6 +421,14 @@ ul {
 }
 
 /* Theme Toggle Button */
+
+.nav-right {
+  display: flex;
+  position: absolute;
+  right: 20px;
+
+}
+
 .theme-toggle {
   position: fixed;
   bottom: 0.75rem;
@@ -472,6 +480,11 @@ ul {
   .nav-container {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .nav-right {
+    position: relative;
+    right: auto;
   }
   
   .nav-list {

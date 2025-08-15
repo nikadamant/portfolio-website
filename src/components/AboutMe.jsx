@@ -8,13 +8,13 @@ const AboutMe = () => {
           I am a passionate web developer with experience in various
           technologies.
         </p>
-        <div className="about-images">
+        {/* <div className="about-images">
           <img
             src="/images/profile.png"
             alt="Profile Image 1"
             className="about-image"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
