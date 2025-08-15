@@ -6,13 +6,13 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
-import ThemeToggle from './components/ThemeToggle';
+
 import './App.css';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    return savedTheme === 'light' ? false : true; // Default to dark mode
   });
 
   useEffect(() => {
@@ -31,13 +31,13 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} onToggle={toggleTheme} />
       <AboutMe />
       <Resume />
       <Projects />
       <ContactMe />
       <Footer />
-      <ThemeToggle isDarkMode={isDarkMode} onToggle={toggleTheme} />
+
     </div>
   );
 }
