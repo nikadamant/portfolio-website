@@ -234,6 +234,7 @@ ul {
 .skills {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
   flex: 1;
   min-width: 250px;
@@ -258,22 +259,71 @@ ul {
 }
 
 .skills-list {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .skill-item {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem;
   margin-bottom: 0.5rem;
-  border-radius: 8px;
+  border-radius: 50%;
   background-color: var(--section-alt-bg);
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid transparent;
+}
+
+/* Tooltip styles */
+.skill-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.skill-item::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  border: 6px solid transparent;
+  border-top-color: var(--section-bg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;}
+
+.skill-item:hover::before,
+.skill-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-12px);
+}
+
+.skill-item:hover::after {
+  transform: translateX(-50%) translateY(-8px);
 }
 
 .skill-item:hover {
@@ -285,6 +335,11 @@ ul {
 }
 
 .skill-icon {
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  width: 32px;
+  height: 32px;
   font-size: 1.5rem !important;
   filter: grayscale(100%);
   transition: all 0.2s ease;
@@ -297,9 +352,16 @@ ul {
   transform: scale(1.1);
 }
 
-.skill-item span {
-  font-weight: 500;
-  transition: color 0.3s ease;
+.skill-item:hover .skill-name {
+  display: visible;
+  color: var(--skill-icon);
+
+}
+
+.skill-item:hover .skill-icon {
+  filter: grayscale(0%);
+  color: var(--skill-icon);
+  transform: scale(1.1);
 }
 
 /* Projects Section */
@@ -471,29 +533,11 @@ ul {
 /* Theme Toggle Button */
 
 .nav-right {
+  width: 47px;
   display: flex;
   position: absolute;
   right: 20px;
 
-}
-
-.theme-toggle {
-  position: fixed;
-  bottom: 0.75rem;
-  right: 1rem;
-  background-color: var(--navbar-bg);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  z-index: 1000;
-}
-
-.theme-toggle:hover {
-  background-color: var(--primary-color);
-  box-shadow: 0 0 15px var(--glow-color);
 }
 
 /* Theme Toggle in Navbar */
@@ -510,7 +554,6 @@ ul {
 }
 
 .theme-toggle-nav:hover {
-  background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.05);
 }
@@ -547,15 +590,6 @@ ul {
   
   .resume-content {
     flex-direction: column;
-  }
-  
-  .skill-item {
-    padding: 0.5rem;
-    gap: 0.5rem;
-  }
-  
-  .skill-icon {
-    font-size: 1.25rem !important;
   }
 
   .project-grid {

@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import AboutMe from './components/AboutMe';
-import Resume from './components/Resume';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
-
 import './App.css';
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
       <Hero />
       <Navbar isDarkMode={isDarkMode} onToggle={toggleTheme} />
       <AboutMe />
-      <Resume />
+      <Skills />
       <Projects />
       <ContactMe />
       <Footer />

@@ -1,5 +1,3 @@
-
-import React from 'react';
 import {
   SiHtml5,
   SiCss3,
@@ -28,51 +26,42 @@ const Resume = () => {
           <div className="skills">
             <h3 className="skills-title">Programming Languages</h3>
             <ul className="skills-list">
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="HTML">
                 <SiHtml5 className="skill-icon" />
-                <span>HTML</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="CSS">
                 <SiCss3 className="skill-icon" />
-                <span>CSS</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="JavaScript">
                 <SiJavascript className="skill-icon" />
-                <span>JavaScript</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="C#">
                 <TbBrandCSharp className="skill-icon" />
-                <span>C#</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Python">
                 <SiPython className="skill-icon" />
-                <span>Python</span>
               </li>
             </ul>
           </div>
 
           <div className="skills">
-            <h3 className="skills-title">Frameworks/Libraries</h3>
+            <h3 className="skills-title">Frameworks/
+                                         Libraries</h3>
             <ul className="skills-list">
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="React">
                 <SiReact className="skill-icon" />
-                <span>React</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Node.js">
                 <SiNodedotjs className="skill-icon" />
-                <span>Node.js</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Express">
                 <SiExpress className="skill-icon" />
-                <span>Express</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="EJS">
                 <SiJavascript className="skill-icon" />
-                <span>EJS</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip=".NET">
                 <SiDotnet className="skill-icon" />
-                <span>.NET</span>
               </li>
             </ul>
           </div>
@@ -80,21 +69,17 @@ const Resume = () => {
           <div className="skills">
             <h3 className="skills-title">Databases</h3>
             <ul className="skills-list">
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="SQL Server">
                 <DiMsqlServer className="skill-icon" />
-                <span>SQL Server</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="PostgreSQL (basic)">
                 <SiPostgresql className="skill-icon" />
-                <span>PostgreSQL(basic)</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="MongoDB (basic)">
                 <SiMongodb className="skill-icon" />
-                <span>MongoDB(basic)</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Redis (basic)">
                 <SiRedis className="skill-icon" />
-                <span>Redis(basic)</span>
               </li>
             </ul>
           </div>
@@ -102,24 +87,20 @@ const Resume = () => {
           <div className="skills">
             <h3 className="skills-title">Tools</h3>
             <ul className="skills-list">
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Git">
                 <SiGit className="skill-icon" />
-                <span>Git</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="GitHub">
                 <SiGithub className="skill-icon" />
-                <span>GitHub</span>
-              </li>              <li className="skill-item">
+              </li>
+              <li className="skill-item" data-tooltip="Visual Studio">
                 <DiVisualstudio className="skill-icon" />
-                <span>Visual Studio</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Visual Studio Code">
                 <TbBrandVscode className="skill-icon" />
-                <span>Visual Studio Code</span>
               </li>
-              <li className="skill-item">
+              <li className="skill-item" data-tooltip="Postman (basic)">
                 <SiPostman className="skill-icon" />
-                <span>Postman(basic)</span>
               </li>
             </ul>
           </div>
